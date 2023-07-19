@@ -17,4 +17,6 @@
     $subject = "=?utf-8?B?".base64_encode("Test Message")."?=";
     $headers = "From: $email\r\nReply-to:$email\r\nContent-Type: text/html;charset=utf-8\r\n";
     mail('bauyrzhan.taimanov01@universitadipavia.it', $subject, $message, $headers);
+    //redirect to previous page
+    header('Location: about.php') 
 ?>
