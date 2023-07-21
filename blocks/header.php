@@ -11,9 +11,16 @@
         <li><a href="#" class="nav-link px-2">Profile</a></li>
         <li><a href="about.php" class="nav-link px-2">About</a></li>
       </ul>
-
+      <?php
+        if($_COOKIE['user'] == 'true'):
+      ?>
       <div class="col-md-3 text-end">
-        <button type="button" class="btn btn-outline-primary me-2">Login</button>
-        <button type="button" class="btn btn-primary" id="mainButton">Sign-up</button>
+        <button class="btn btn-primary" onclick="location.href='auth.php'">My Profile</button>
       </div>
+      <?php else: ?>
+      <div class="col-md-3 text-end">
+        <button class="btn btn-outline-primary me-2" onclick="location.href='login.php'" type="button">Login</button>
+        <button type="button" class="btn btn-primary" onclick="location.href='auth.php'">Sign-up</button>
+      </div>
+      <?php endif; ?>
     </header>
